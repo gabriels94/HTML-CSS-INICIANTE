@@ -1,0 +1,43 @@
+/*Lembrando que, a diferença indentificador e classe, e que o indentificador serve para itens unicos, e a classe serve para itens que serão repetidos nas classes usamos # para reverenciar, e nos IDS usamos o ponto ''.'' .*/
+
+.titulo-principal{
+    padding-left: 20px;
+}
+
+#banner {
+  /* o width a largura */
+  width: 100%;
+}
+
+.principal {
+  background: #cccccc;
+}
+
+.titulo-centralizado {
+  /* text-align alinha o texto*/
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+/* aqui podemos ver um exemplo de como reverenciamos o elemento que esta no html usando o # e o nome igual ao do id*/
+#missao {
+  text-align: 20px;
+}
+
+em strong {
+  /* color = cor */
+  color: #ff0000;
+}
+
+/* ja para reverenciarmos uma classe usamos o . e o nome que demos a classe*/
+.itens {
+  font-style: italic;
+}
+
+.beneficios {
+  background: #ffffff;
+}
+

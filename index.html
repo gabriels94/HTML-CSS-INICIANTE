@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!--usando o meta name="viewport" content="width=device-width" nós podemos fazer o nosso site se adaptar a todos os tipos de telas, e podemos ver isso no console do desenvolvedor no icone do celular no cantinho da tela-->
+    <meta name="viewport" content="width=device-width">
+    <title>Barbearia Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!--O header e uma tah semântica que faz com que o navegador entenda melhor o nosso conteudo e com isso carregue melhor a nossa pagina-->
+    <header>
+        <!--Observe que a tag h1 envolve a tag da imagem, que e onde buscamos o conteudo que sera exibido.-->
+        <div class="caixa">
+            <!--"Alt" é uma alternativa para quem não consegue ver aquela imagem ou se aquela imagem não está carregando corretamente-->
+            <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+            <nav>
+                <ul>
+                    <!--A tag <a> serve justamente como uma âncora, um link, que vai nos levar para outro ponto da internet.-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <img class="banner" src="banner.jpg">
+
+    <main>
+        <!--Para um bloco onde o conteudo tenha o mesmo significado, o mesmo sentido, usamos uma <section>.-->
+        <section class="principal content">
+            <h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
+
+            <img class="utensilios" src="utensilios.jpg" alt="utensilios de um barbeiro.">
+
+            <p>Localizada no coração da cidade, a <strong>Barbearia Alura</strong> Traz para o mercado oque há de melhor
+                para
+                seu
+                cabelo e barba.
+                fundada em 2019, a Barbearia Alura ja é destaque na cidade e conquista novos clientes a cada dia</p>
+            <!--quando temos um css especifico para um paragrafo, como font-size: 20px, usamos o id="" e damos um nome a ele que vamos usar na folha de css usando o # e o nome que demos a ele-->
+            <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos
+                        clientes"</strong>.</em></p>
+
+            <p>Oferecemos Profissionais experientes e antenados ás mudanças no mundo da moda. O atendimento possui
+                padrão de
+                excelência
+                e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+        </section>
+
+        <section class="mapa">
+            <h3 class="titulo-principal">Nosso estabelecimento</h3>
+            <p>Nosso estabelecimento está localizado no coração da cidade.</p>
+
+            <div class="mapa-conteudo">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.448461139043!2d-46.63465338506987!3d-23.58824428466958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1583860426212!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </section>
+
+        <section class="beneficios">
+
+            <h3 class="titulo-principal">Beneficios</h3>
+
+            <div class="conteudo-beneficios content">
+                <!--UL = lista nao ordenada quando a lista nao precisa ter uma ordem certa, e OL = lista ordenada quando os elementos da lista precisam seguir uma ordem-->
+                <ul class="lista-beneficios">
+                    <!--A LI serve para marcar cada um dos conteudos da nossa lista, ja as classes no css serve para marcamos itens botarmos os estilos em cada um deles mais sao repetiveis ou seja podemos marcar todos os nossos itens com a mesma classe-->
+                    <li class="itens">Atendimento aos clientes</li>
+                    <li class="itens">Espaço diferenciado</li>
+                    <li class="itens">localização</li>
+                    <li class="itens">Profissionais qualificados</li>
+                    <li class="itens">Pontualidade</li>
+                    <li class="itens">Limpeza</li>
+                </ul>
+                <img src="beneficios.jpg" class="imagem-beneficios">
+            </div>
+
+            <div class="video">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="logo-branco.png">
+        <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
+    </footer>
+</body>
+
+</html>

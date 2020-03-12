@@ -1,0 +1,394 @@
+/* essa fonte pode ser encontrada no google fonts, e é uma das fontes mais usadas para deixar as paginas mais iguais em todos os navegadores então temos que importar o link no html e depois usarmos o link font-family no começo do css para que ele se aplique em todos os elementos*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*aqui no header usamos o background para dar uma cor de fundo para o nosso cabeçalho, e usamos um padding de 20px para cima e para baixo e 0 para esquerda e direita para que entre a margin e o conteudo tenha esses 20 pixels e nao pode colocar ponto nem virgula entra um e outro*/
+
+header {
+  background: #bbbbbb;
+  padding: 20px 0;
+}
+
+/*aqui no .caixa usamos o position relative para que ele fique relativo ao tamanho da caixa uma largura width de 940px que é padrão, e o margin para cima e para baixo seja 0, e para esquerda e para direita seja automatico, = auto;*/
+.caixa {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+}
+
+nav {
+  /*position absolute, voce coloca o elemento em qualquer lugar do site que quiser, position static nada vai mudar a posição dele ja é essa, position relative ele vai olhar o ponto inicial, mas vai ter uma nova posição que é relativa aquela posição inicial, ai eu posso mexer no que eu quiser*/
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  /*display: inline; serve para deixar os itens um do lado do outro, e o block serve para deixar os itens um abaixo do outro*/
+  display: inline;
+
+  /*margin: serve para dizer como vc quer alinhar seus elementos, primeiro e topo, segundo vai para direita, terceiro para baixo, por ultimo para esquerda. */
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  /*text-transform uppercase serve para deixar todo o texto em maiusculo usando o uppercase*/
+  text-transform: uppercase;
+  color: #000000;
+  /*font-weight:; serve para a deixar a fonte do texte mais grossa*/
+  font-weight: bold;
+
+  /*font-size voce muda o tamanho da font em pixels*/
+  font-size: 22px;
+
+  /*text-decoration: none; serve para tirar a decoração do texto que deseja mudar*/
+  text-decoration: none;
+}
+
+/* o operador :hover, serve para mudar a cor do elemento que voce quer quando o usuario passa com o mouse por cima*/
+nav a:hover {
+  color: #c78c19;
+  text-decoration: underline;
+}
+
+.produtos {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* usando o inline-block o tamanho pode ser ajustado, tanto na largura, quanto na altura.*/
+.produtos li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  /*border-radius coloca uma borda arredondada no canto na linha onde queremos mecher,*/
+  border-radius: 10px;
+  /*aqui iremos colocar uma borda na imagem dos produtos, primeiro o tamanho dela, segundo a configuração e o tipo dela, terceiro a cor.*/
+  border: 2px solid #000000;
+  /*vertical-align: top; alinha o conteudo pela linha de cima*/
+  vertical-align: top;
+  /* o box-sizing: border-box; serve para colocar o espaçamento lateral, dentro do percentual*/
+  box-sizing: border-box;
+  /* margin é o espaçamento externo do conteudo*/
+  margin: 0 1.5%;
+  /* padding é o espaçamento interno do conteudo ou seja estou aumentando o tamanho do conteudo*/
+  padding: 30px 20px;
+}
+
+.produtos li:hover {
+  border-color: #c78c19;
+}
+
+/* o operador :active serve para muda a cor do elemento quando o usuario clica nele*/
+.produtos li:active {
+  border-color: #088c19;
+}
+
+/* aqui colocando uma tag na frente do hover e utilizando um font-size quando o usuario passar o mouse por cima do elemento ele aumenta o tamanho*/
+.produtos li:hover h2 {
+  font-size: 34px;
+}
+
+.produtos h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.produto-descricao {
+  font-size: 18px;
+}
+
+.produto-preco {
+  font-size: 22px;
+  font-weight: bold;
+
+  /*margin-top da uma margem do topo do elemento que voce quer mudar*/
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  /*quando queremos estilizar uma imagem no nosso rodapé usamos dessa forma utilizando assim, background: url("bg.jpg")*/
+  background: url("bg.jpg");
+}
+
+/*aqui estilizamos o nosso copyright */
+.copyright {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 20px 0 0;
+}
+
+form {
+  margin: 40px 0;
+}
+
+/* No CSS quando criamos uma configuração especifica para um elemento e queremos replicar a mesma configuração para outro elemento, eu faço isso usando a virgula. e colocar o nome do elemento que quer que tenha a mesma configuração a frente, como exemplo que temos abaixo.*/
+form label,
+form legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padrao {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+/* e importante lembrar como funciona o CSS, o ID por se tratar de um elemento especifico ele sempre vai ser mais forte, e o uso de duas tags como form e p sempre vai ser mais forte do que se usarmos uma unica tag exemplo P{} para estilizarmos. mas se mudarmos no HTML por exemplo colocar um style e colocarmos o color igual a roxo o navegador vai entender que é roxo porque o inline e muito especifico e por isso ele é o mais forte*/
+.checkbox {
+  margin: 20px 0;
+}
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  /*Utilizamos a propriedade transition para prover uma transição visual de um elemento, e utilizando a propriedada "all", a frente do "1s" voce vai dizer para o navegador que todos os elementos de "enviar demorem 1 segundo para renderizar"*/
+  transition: 1s all;
+  cursor: pointer;
+}
+
+/* e quando colocarmos o mouse por cima do botão de enviar eu quero que ele aumente em 20%. para isso, eu vou usar a propriedade transform e o valor dentro dela é o "scale", ou seja, de scala e medida usando o "transform: scale(1.2)". agora quando passa o mouse por cima do elemento, ele aumenta 20% proporcionalmente todas as coisas do "enviar", sem precisar fazer conta.*/
+.enviar:hover {
+  background: darkorange;
+  transform: scale(1.2);
+}
+
+table {
+  margin: 20px 0 40px;
+}
+
+thead {
+  background: #555555;
+  /* o color serve para deixar as letras de dentro do conteudo com a cor que voce desejar*/
+  color: white;
+  font-weight: bold;
+}
+
+/* para deixar um estilo repetivel em duas tags colocamos uma virgula e nome da outra tag a frente*/
+td,
+th {
+  border: 1px solid #000000;
+  padding: 8px 15px;
+}
+
+/* css da pagina inicial */
+.banner {
+  width: 100%;
+}
+
+.titulo-principal {
+  text-align: center;
+  /* se quisermos que a fonte de titulo-principal seja o dobro da fonte padrão, independente do tamanho dessa fonte padrão, utilizamos a medida em, a media proporcional para pixels. Se quisermos duas vezes o tamanho base (15 pixels), basta escrever 2em.*/
+  font-size: 2em;
+  margin: 0 0 1em;
+  /*e o clear cria uma barreira para que o float da onde ele foi colocado para baixo não afete mais nada.*/
+  clear: left;
+  /* usando o color: rgba(); como exemplo abaixo, você consegue colocar uma opacidade nos elementos e todas as cores que você quer
+  color: rgba(0, 0, 0, 0.3);*/
+  /* e tambem usando o text-shadow conseguimos colocar uma sombra sobre o texto que queremos 
+  text-shadow: 2px 2px #FF0000;*/
+}
+
+.principal {
+  padding: 3em 0;
+  background: #fefefe;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.principal p {
+  margin: 0 0 1em;
+}
+
+.principal strong {
+  font-weight: bold;
+}
+
+.principal em {
+  font-style: italic;
+}
+
+.utensilios {
+  width: 120px;
+  /* o unico jeito de mecher em um elemento sem que ele fique por cima dos outros elementos da pagina é usando o float*/
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.mapa {
+  padding: 3em 0;
+  background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa-conteudo {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.beneficios {
+  padding: 3em 0;
+  background: #888888;
+  /* usando o box-shadow: inset como exemplo abaixo conseguimos colocar uma borda interna no elemento que queremos
+  box-shadow: inset 0 0 30px #FF0000;*/
+}
+
+.conteudo-beneficios {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.lista-beneficios {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.itens {
+  line-height: 1.5;
+}
+
+.itens:first-child {
+  font-weight: bold;
+}
+
+/*Quando queremos criar um elemento na página, via CSS, antes do elemento do HTML, usamos a propriedade :before.*/
+.itens:before {
+  content: "🟊";
+}
+
+/* o opacity, serve para dar uma opacidade no elemento que quiser, ele vai de 0 a 1, ou seja 0.30 igual a 30%, 0.70 e igual a 70% de opacidade, e o transition para fazer essa opacidade demorar alguns milisegundos para desaparecer*/
+.imagem-beneficios {
+  width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  /* usando o box-shadow como exemplo abaixo você consegue colocar uma sombra no elemento que quiser, e tbm podemos colocar mais elementos usando mais propriedades a frente como, -10px, -10px yellow, -20px 20px rgba(255,0,0,0.5);*/
+  box-shadow: 10px 10px 10px 0 #000000;
+}
+
+/* e o hover serve para fazer esse efeito quando o mouse passar por cima do elemento*/
+.imagem-beneficios:hover {
+  opacity: 0.3;
+}
+
+.video {
+  width: 560px;
+  margin: 2em auto;
+}
+
+/*é dentro dessa media query que criamos um estilo visual que compreenda telas de até 480px. no caso do video, temos que ir la no html e alterar o width dele para 100% para ficar do tamanho da pagina*/
+@media screen and (max-width: 480px) {
+  .caixa, .principal, .conteudo-beneficios, .mapa-conteudo,.produtos,.video, .enviar {
+
+    width: auto;
+    
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  .titulo-principal{
+    padding: 25px 0px 0px 0px;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .lista-beneficios, .imagem-beneficios {
+    width: 100%;
+  }
+  
+   .content {
+    padding: 0px 5px 0px 7px;
+  
+  }
+
+    header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .produtos li {
+    display: block;
+    width: auto;
+    margin: 0px 0px 20px 0px;
+  }
+  
+  form {
+    margin: 80px 0px 0px 80px;
+  }
+
+  fieldset {
+    margin: 0px 0px 40px 0px;
+  }
+
+  table {
+    margin: 40px 0px 0px 80px
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* usando esses metodos, podemos selecionar qualquer elemento que quisermos da nossa pagina e dar uma cor a ele sem interferir nos outros
+
+main > p {
+  background: red;
+}
+
+img + p {
+  background: blue;
+}
+
+img ~ p {
+  background: yellow;
+}
+
+.principal p:not(#missao) {
+  background: orange;
+}
+*/
+
+/* para conseguirmos fazer um calculo exato do tamanho que queremos deixar o nosso elemento temos um jeito como está no exemplo abaixo usando o "calc" e os numeros que queremos fazer os calculos entre parenteses () pode fazer isso
+
+width: calc( 40% - ((26px * 4) / 4); */
